@@ -10,7 +10,7 @@ const Sidebar = () => {
         x-show="asideOpen"
       >
         <a
-          href="#"
+          href="/"
           className="flex items-center space-x-1 rounded-md px-0 py-2 lg:px-2 lg:py-3"
         >
           <span className="text-2xl">
@@ -20,7 +20,7 @@ const Sidebar = () => {
           <span className="pl-[1.5px] hidden lg:inline">Clerkie Challenge</span>
         </a>
         <a
-          href="#"
+          href="/"
           className="flex items-center space-x-1 rounded-md px-0 py-2 lg:px-2 lg:py-3"
         >
           <span className="text-2xl">
@@ -31,7 +31,7 @@ const Sidebar = () => {
         </a>
 
         <Link
-          href="/"
+          href="/friends"
           className="flex items-center space-x-1 rounded-md px-0 py-2 lg:px-2 lg:py-3 bg-[#424242]"
         >
           <span className="text-2xl">

@@ -1,3 +1,3 @@
-import Friends from "./Friends/index";
+import FriendsList from "./FriendsList/index";
 
-export { Friends };
+export { FriendsList };
