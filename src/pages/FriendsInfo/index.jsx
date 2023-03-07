@@ -10,15 +10,6 @@ const index = () => {
 
   console.log("id -> ", id);
 
-  const grabCardData = () => {
-    try {
-      const parsedCard = JSON.parse(card);
-      return parsedCard;
-    } catch (error) {
-      console.log("no card data found");
-    }
-  };
-
   useEffect(() => {
     const parsedCard = cardData.find((card) => card.id === parseInt(id));
     setCard(parsedCard);
@@ -32,17 +23,18 @@ const index = () => {
         <Header />
         <main className="flex justify-start sm:justify-center mx-[30px] sm:mx-[120px] sm:px-4 py-6 sm:py-16 h-auto">
           {parsedCard ? (
-            <div className="my-2 w-[100%] h-auto" key={parsedCard?.id}>
+            <div className="w-[100%] h-auto" key={parsedCard?.id}>
               <div className="rounded-md border p-5 w-full h-full bg-white">
                 <div className="flex w-full items-center justify-center pb-2">
                   <div className="w-24 h-24 md:shrink-0 border rounded-full overflow-hidden">
                     <img src="/avatar.png" alt="avatar" />
                   </div>
                 </div>
-                <div className="text-center pb-3">
-                  <h2 className="text-2xl font-bold text-slate-700 mb-2">
+                <div className="text-center">
+                  <h2 className="text-2xl font-bold text-slate-700 mb-2 inline mr-1">
                     {parsedCard?.name}
                   </h2>
+                  {parsedCard.verified && (<img src="/verified.png" alt="verified status" className="w-7 inline -mt-1" />)}
                   <p className="text-sm text-gray-500">
                     {parsedCard ? (
                       parsedCard.category === "close" ? (
@@ -63,6 +55,9 @@ const index = () => {
                     ) : (
                       ""
                     )}
+                  </p>
+                  <p className="text-sm font-medium text-gray-500 text-center mt-2">
+                    Followers: {parsedCard?.followers}&nbsp;• Following: {parsedCard?.following}
                   </p>
                 </div>
                 <div className="px-4 py-2">
@@ -88,10 +83,11 @@ const index = () => {
             </div>
           ) : (
             <>Error: Card Data Not Available.</>
-          )}
-        </main>
-      </div>
-    </div>
+          )
+          }
+        </main >
+      </div >
+    </div >
   );
 };
 

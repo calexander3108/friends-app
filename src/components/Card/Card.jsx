@@ -82,7 +82,7 @@ const Card = ({ filterProp }) => {
         (card) =>
           card.category === "close" ||
           card.category === "superclose" ||
-          card.category === ""
+          card.category === "none"
       );
     }
     if (filter === "mix") {

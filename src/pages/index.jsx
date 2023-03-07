@@ -19,7 +19,7 @@ export default function Home() {
         <Sidebar className="flex-1" />
         <div className="flex-1">
           <Header />
-          <div>
+          <div className="m-5 ">
             <h1>Home Page</h1>
           </div>
         </div>

@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import { Header, Sidebar } from "../../components/index";
 import { FriendsList } from "../../sections/index";
 
