@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import cardData from "../../data/cardData.json";
+import { CustomButton } from "../index";
 
 // skeleton shimmer effect dependencies
 import Skeleton from "react-loading-skeleton";
@@ -101,7 +102,7 @@ const Card = ({ filterProp }) => {
   return (
     <>
       {cards.map((card) => (
-        <Link href={`/Info?id=${JSON.stringify(card.id)}`}>
+        <Link href={`/FriendsInfo?id=${JSON.stringify(card.id)}`}>
           <div className="my-2 w-[100%] h-auto" key={card.id}>
             <div className="rounded-md border p-5 w-9/12 bg-white">
               <div className="flex w-full items-center justify-start pb-3">
@@ -112,20 +113,19 @@ const Card = ({ filterProp }) => {
                 </div>
                 <div className="flex items-center space-x-8">
                   {card.category === "close" && (
-                    <button className="rounded-2xl border bg-blue-100 px-3 py-1 mx-3 text-xs font-semibold">
-                      <span className="text-blue-500 text-[12px] font-medium">
-                        Close Friends
-                      </span>
-                    </button>
+                    <CustomButton
+                      bgColor="bg-blue-100"
+                      textColor="text-blue-500"
+                      text="Close Friend"
+                    />
                   )}
                   {card.category === "superclose" && (
-                    <button className="rounded-2xl border bg-green-100 px-3 py-1 mx-3 text-xs font-semibold">
-                      <span className="text-green-500 text-[12px] font-medium">
-                        Super Close Friends
-                      </span>
-                    </button>
+                    <CustomButton
+                      bgColor="bg-green-100"
+                      textColor="text-green-500"
+                      text="Super Close Friend"
+                    />
                   )}
-                  {card.category === "" && <></>}
                 </div>
               </div>
               <div>

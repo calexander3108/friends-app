@@ -50,7 +50,7 @@ const index = () => {
             className="text-[#D7D7D7] hover:text-blue-500 transition delay-25 font-medium ml-4 text-sm sm:text-[14px]"
             onClick={handleResetSelect}
           >
-            Clear alls
+            Clear all
           </button>
         </div>
         <Filter

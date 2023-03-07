@@ -41,9 +41,8 @@ const Filter = ({
 
   return (
     <div
-      className={`w-[250px] sm:w-[320px] h-auto z-10 absolute top-[140px] sm:top-[190px] lg:top-[210px] bg-white rounded-md shadow-md ${
-        isOpen ? "block" : "hidden"
-      }`}
+      className={`w-[250px] sm:w-[320px] h-auto z-10 absolute top-[140px] sm:top-[190px] lg:top-[210px] bg-white rounded-md shadow-md ${isOpen ? "block" : "hidden"
+        }`}
     >
       <div className="flex justify-between border-b p-3">
         <button
@@ -64,7 +63,7 @@ const Filter = ({
           />
         </button>
       </div>
-      <div className="flex flex-row justify-start p-4">
+      <div className="flex flex-row justify-start p-4 -mb-1">
         <span className="text-[14px] text-[#686868]">Friend Status</span>
       </div>
       <div className="flex flex-row justify-between items-center px-4 font-medium">
