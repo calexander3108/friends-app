@@ -68,7 +68,7 @@ const index = () => {
                 <div className="px-4 py-2">
                   <p className="text-lg text-center font-medium text-gray-700">
                     {parsedCard
-                      ? "Hello everyone! My name is " +
+                      ? "Hello! My name is " +
                       parsedCard.name +
                       " and I'm happy to be here!"
                       : ""}
