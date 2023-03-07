@@ -34,8 +34,8 @@ const index = () => {
           {parsedCard ? (
             <div className="my-2 w-[100%] h-auto" key={parsedCard?.id}>
               <div className="rounded-md border p-5 w-full h-full bg-white">
-                <div className="flex w-full items-center justify-center pb-3">
-                  <div className="w-24 h-24 border rounded-full overflow-hidden">
+                <div className="flex w-full items-center justify-center pb-2">
+                  <div className="w-24 h-24 md:shrink-0 border rounded-full overflow-hidden">
                     <img src="/avatar.png" alt="avatar" />
                   </div>
                 </div>
@@ -69,8 +69,8 @@ const index = () => {
                   <p className="text-lg text-center font-medium text-gray-700">
                     {parsedCard
                       ? "Hello everyone! My name is " +
-                        parsedCard.name +
-                        " and I'm happy to be here!"
+                      parsedCard.name +
+                      " and I'm happy to be here!"
                       : ""}
                   </p>
                 </div>
